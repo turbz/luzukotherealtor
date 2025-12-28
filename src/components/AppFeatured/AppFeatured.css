@@ -1,0 +1,32 @@
+.App-Featured {
+  margin: 4em 0;
+}
+
+.App-Featured .featured-cardlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1em 3vw;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.App-Featured .feature-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.App-Featured .feature-nav button {
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: auto 0;
+}
+
+.App-Featured .feature-nav button.active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-text);
+}

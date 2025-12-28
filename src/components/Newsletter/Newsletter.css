@@ -1,0 +1,115 @@
+/* 1. BASE STYLES (Mobile First) */
+.newsletter-section {
+  background-color: #1e2122;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: "Lora", serif;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  gap: 30px;
+}
+
+.newsletter-heading {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 500;
+}
+
+.newsletter-description {
+  color: #a0a0a0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+}
+
+/* Form Layout (Mobile) */
+.newsletter-form {
+  display: flex;
+  flex-direction: column; /* Input and Button stack on very small screens */
+  gap: 15px;
+}
+
+.newsletter-input {
+  height: 100%;
+  padding: 0 20px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+}
+
+.newsletter-submit {
+  display: flex;
+  height: 55px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.btn-text {
+  flex: 1;
+  background-color: #94b0b7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.btn-icon {
+  background-color: #ffffff;
+  color: #000;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* 2. TABLET / DESKTOP STYLES */
+@media (min-width: 768px) {
+  .newsletter-section {
+    padding: 100px 5%;
+  }
+
+  .newsletter-container {
+    flex-direction: row; /* Side-by-side */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .newsletter-heading {
+    flex: 1;
+    font-size: 3.5rem;
+  }
+
+  .newsletter-content {
+    flex: 1;
+    max-width: 550px;
+  }
+
+  .newsletter-form {
+    flex-direction: row; /* Input and Button align horizontally */
+    gap: 0;
+    height: 60px;
+  }
+
+  .newsletter-submit {
+    height: 60px;
+  }
+
+  .btn-text {
+    padding: 0 30px;
+    flex: none;
+  }
+}

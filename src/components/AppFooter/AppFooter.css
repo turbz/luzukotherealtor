@@ -1,0 +1,95 @@
+/* 1. BASE STYLES (Mobile First) */
+.footer-section {
+  background-color: #1e2122; /* Matches the newsletter background */
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: sans-serif; /* Clean sans-serif for UI elements */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stacked columns on mobile */
+  gap: 40px;
+}
+
+.footer-column h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column a,
+.footer-column address {
+  color: #a0a0a0; /* Muted grey text */
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: normal;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+/* Specific styling for the first row of socials */
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Styling for the contact details */
+.contact-info address {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.contact-email {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contact-phone {
+  color: #94b0b7 !important; /* Muted blue-grey to match brand */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* 2. TABLET / DESKTOP STYLES */
+@media (min-width: 768px) {
+  .footer-section {
+    padding: 100px 5%;
+  }
+
+  .footer-container {
+    display: grid;
+    /* 4 columns layout: Socials, Discover, About, Contact */
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .social-links {
+    flex-direction: row;
+  }
+}
+
+/* Extra wide screens */
+@media (min-width: 1200px) {
+  .footer-container {
+    gap: 80px;
+  }
+}

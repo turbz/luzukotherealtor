@@ -1,0 +1,53 @@
+.RoomGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+/* Core Layout Styles */
+.RoomGrid .block-item {
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.RoomGrid .block-item button {
+  margin-top: 1em;
+}
+
+.RoomGrid .text-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* TABLET: 2 Columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .RoomGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* We need to flip items 5 and 6 to maintain the zigzag on 2-col 
+     because of how we arranged the data for the 4-col desktop. */
+  .RoomGrid .block-item:nth-child(5) {
+    order: 2;
+  }
+  .RoomGrid .block-item:nth-child(6) {
+    order: 1;
+  }
+}
+
+/* DESKTOP: 4 Columns */
+@media (min-width: 1024px) {
+  .RoomGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .RoomGrid .block-item {
+    order: initial; /* Data order is already set for 4-col zigzag */
+    height: 55vh;
+  }
+}

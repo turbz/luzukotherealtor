@@ -1,0 +1,102 @@
+/* 1. BASE STYLES (Mobile First) */
+.featured-header {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+/* Subtitle with the horizontal line */
+.subtitle-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.line {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: #90b0b7; /* Brand muted blue */
+}
+
+.subtitle {
+  color: #90b0b7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Main Title */
+.main-title {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+  color: #1e2122;
+  line-height: 1.1;
+}
+
+/* Button Styling (Consistent with your previous components) */
+.see-all-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  height: 55px;
+  width: 100%; /* Full width on mobile */
+  min-width: 280px;
+}
+
+.btn-label {
+  background-color: #90b0b7;
+  color: white;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.btn-arrow {
+  background-color: #ffffff;
+  color: #1e2122;
+  border: 1px solid #90b0b7; /* To define the edge on white bg */
+  height: 100%;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* 2. TABLET / DESKTOP STYLES */
+@media (min-width: 768px) {
+  .featured-header {
+    flex-direction: row; /* Side-by-side */
+    justify-content: space-between;
+    align-items: flex-end; /* Align button with bottom of text */
+    padding: 1em 5%;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .see-all-btn {
+    width: auto; /* Shrink to fit content on desktop */
+  }
+
+  .btn-label {
+    padding: 0 1em;
+  }
+}

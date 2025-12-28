@@ -1,0 +1,188 @@
+.App-Banner .banner-container {
+  background-color: #ebf3f5;
+  padding-top: 8vh;
+}
+
+.App-Banner .banner-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  text-align: center;
+  width: 100vw;
+  height: 50vh;
+  z-index: 10;
+}
+
+.App-Banner .banner-content h2 {
+  font-family: "Lora", serif;
+  font-size: 12vw;
+  font-weight: 900;
+  line-height: 1em;
+  opacity: 0.8;
+}
+
+.App-Banner .banner-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  padding: 0.5em;
+
+  background-color: #90b0b7;
+}
+
+.App-Banner .banner-content a span:nth-child(1) {
+  color: #fff;
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.App-Banner .banner-content a span:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+
+.App-Banner .banner-content a svg {
+  width: 24px;
+  height: 24px;
+}
+
+.App-Banner .villa-images {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.App-Banner figure {
+  position: relative;
+  height: 100%;
+  background-color: #90b0b7;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.App-Banner .slider-nav {
+  display: flex;
+  margin-top: 1em;
+  gap: 0.5em;
+}
+
+.App-Banner .slider-nav li {
+  color: transparent;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  font-weight: 500;
+}
+
+@media (min-width: 30em) {
+  .App-Banner .banner-content h2 {
+    font-size: 9vw;
+    white-space: nowrap;
+  }
+
+  .App-Banner .banner-content h2 {
+    font-size: 8vw;
+  }
+
+  .App-Banner .slider-nav {
+    position: absolute;
+    bottom: -3em;
+    left: 10vw;
+    flex-flow: column nowrap;
+    gap: 1.4em;
+  }
+
+  .App-Banner .slider-nav li {
+    display: flex;
+    font-size: 1.4em;
+    color: #000;
+    width: auto;
+    height: auto;
+    background-color: transparent !important;
+    opacity: 0.3;
+  }
+
+  .App-Banner .slider-nav li.active {
+    opacity: 1;
+  }
+
+  .App-Banner .slider-nav mark {
+    margin: auto 0;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    margin-right: 1em;
+  }
+}
+
+@media (min-width: 50em) {
+  .App-Banner .banner-container {
+    display: flex;
+    height: 50vh;
+  }
+
+  .App-Banner .banner-content {
+    position: relative;
+    text-align: left;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    height: 100%;
+    width: 65%;
+    padding-left: 10vw;
+    right: -5vw;
+    z-index: 10;
+  }
+
+  .App-Banner .slider-nav {
+    bottom: 10vh;
+    left: -1em;
+  }
+
+  .App-Banner .villa-images {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 64em) {
+  .App-Banner .banner-container {
+    display: flex;
+    height: 120vh;
+  }
+
+  .App-Banner .banner-content {
+    position: relative;
+    text-align: left;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    height: 100%;
+    width: 60%;
+    padding-left: 18vw;
+    margin-top: -8vh;
+    right: 0;
+    z-index: 10;
+  }
+
+  .App-Banner .banner-content h2 {
+    font-size: 5vw;
+  }
+
+  .App-Banner .slider-nav {
+    bottom: 30vh;
+    left: 5vw;
+  }
+
+  .App-Banner .villa-images {
+    width: 40%;
+  }
+}

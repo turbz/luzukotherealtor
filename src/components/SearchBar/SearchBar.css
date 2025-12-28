@@ -1,0 +1,183 @@
+.Search-Bar {
+  position: relative;
+  z-index: 1;
+}
+
+.Search-Bar .search-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile default */
+  background: white;
+  /* border: 1px solid #eee; */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
+  margin: 20px 5vw;
+}
+
+.Search-Bar .search-section {
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels */
+.Search-Bar .search-section label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+/* Input Styles */
+.Search-Bar .input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Search-Bar .input-group .icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.Search-Bar .input-group input {
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  width: 100%;
+}
+
+.Search-Bar .placeholder-text {
+  flex-grow: 1;
+  color: #000;
+}
+
+.Search-Bar .arrow {
+  color: #999;
+  font-size: 14px;
+}
+
+.Search-Bar .arrow svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Guest Stepper */
+.Search-Bar .guest-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Search-Bar .guest-count {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Search-Bar .stepper {
+  display: flex;
+  gap: 8px;
+}
+
+.Search-Bar .step-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* Search Button */
+.Search-Bar .search-submit {
+  background-color: #94b2b8; /* Muted teal from image */
+  border: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.Search-Bar .search-submit:hover {
+  background-color: #7f9ca2;
+}
+
+.Search-Bar .search-icon {
+  width: 32px;
+  fill: white;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablet View */
+@media (min-width: 37.5em) {
+  .Search-Bar .search-container {
+    grid-template-columns: 1fr 1fr auto;
+    margin-top: -5vh;
+  }
+
+  .Search-Bar .location {
+    grid-column: 1 / 2;
+    border-right: 1px solid #eee;
+  }
+  .Search-Bar .check-in {
+    grid-column: 2 / 3;
+  }
+  .Search-Bar .check-out {
+    grid-column: 1 / 2;
+    border-right: 1px solid #eee;
+    border-bottom: 0;
+  }
+  .Search-Bar .guests {
+    grid-column: 2 / 3;
+    border-bottom: 0;
+  }
+
+  .Search-Bar .search-submit {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    width: 100px;
+    height: 100%;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 80em) {
+  .Search-Bar .search-container {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 100px;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 22vh;
+    min-height: 120px;
+    margin-top: -22vh;
+  }
+
+  .Search-Bar .search-section {
+    width: 20%;
+    border-bottom: 0 !important;
+    border-right: 1px solid #94b2b8;
+    margin: 3em 0;
+    padding: 0 3vw;
+  }
+
+  .Search-Bar .guests {
+    border-right: 0;
+  }
+
+  .Search-Bar .search-submit {
+    grid-column: 5;
+    grid-row: 1;
+    height: 100%;
+  }
+}

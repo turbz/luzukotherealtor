@@ -1,0 +1,11 @@
+@media (min-width: 64em) {
+  .About-Us,
+  .about-container {
+    width: 84vw;
+    margin: 0 auto;
+  }
+
+  .About-Us .about-content {
+    width: 35vw !important;
+  }
+}
